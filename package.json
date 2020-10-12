@@ -1,0 +1,26 @@
+{
+  "name": "Trix Guard",
+  "version": "0.0.1",
+  "description": "Trix gelmiş geçmiş en iyi guard",
+  "main": "triple.js",
+  "scripts": {
+    "start": "node triple.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "express": "^4.17.1",
+    "fs": "^0.0.2",
+    "quick.db": "^7.1.2",
+    "snekfetch": "^4.0.4"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/discordjs-version12"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Trix Guard"
+  ]
+}
