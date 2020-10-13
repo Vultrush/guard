@@ -563,7 +563,7 @@ client.on("guildMemberAdd", async member => {
 
 
 //---------------------------------Gir - çık-----------------------------------------------
-client.on("guildCreate", guild => {
+client.on("guildCreate", (guild,bot) => {
   let log = client.channels.cache.get("765690118576930837");
   const embed = new Discord.MessageEmbed()
     .setAuthor("Yeni bir sunucuya eklendim!")
@@ -573,19 +573,20 @@ client.on("guildCreate", guild => {
     .addField("<a:cark:758932136228159497> Sunucu ID:", guild.id)
     .addField("<a:cark:758932136228159497> Sunucu Sahibi:", guild.owner)
     .addField("<a:cark:758932136228159497> Sunucu Bölgesi:", guild.region)
-    .addField("<a:cark:758932136228159497> Sunucu Üye Sayısı:", guild.members.size)
-    .addField("<a:cark:758932136228159497> Sunucu Kanal Sayısı:", guild.channels.size)
-    .addField("<a:cark:758932136228159497> Sunucu Rol Sayısı:", guild.roles.size)
-    .addField("<a:cark:758932136228159497> Toplam Üye Sayısı:", guild.members.size)
-    .addField("<a:cark:758932136228159497> Toplam Kanal Sayısı:", guild.channels.size)
-    .addField("<a:cark:758932136228159497> Toplam Rol Sayısı:", guild.roles.size)
+    .addField("<a:cark:758932136228159497> Sunucu Üye Sayısı:", guild.members.cache.size)
+    .addField("<a:cark:758932136228159497> Sunucu Kanal Sayısı:", guild.channels.cache.size)
+    .addField("<a:cark:758932136228159497> Sunucu Rol Sayısı:", guild.roles.cache.size)
+    .addField("<a:cark:758932136228159497> Toplam Sunucu Sayısı:", bot.guilds.channels.cache.size.toLocaleString())
+    .addField("<a:cark:758932136228159497> Toplam Üye Sayısı:", bot.guilds.members.cache.size.toLocaleString())
+    .addField("<a:cark:758932136228159497> Toplam Kanal Sayısı:", bot.guilds.channels.cache.size.toLocaleString())
+    .addField("<a:cark:758932136228159497> Toplam Rol Sayısı:", client.guilds.channels.cache.size.toLocaleString())
     .setTimestamp()
     .setFooter(client.user.username, client.user.avatarURL);
   log.send(embed);
 });
 
 client.on('message', async message => {
-if (message.content === '!fake') { // . yerine prefixi yaz
-  client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
+if (message.content === '!fake') {
+  client.emit('guildCreate', message.guild)
     }
 });
