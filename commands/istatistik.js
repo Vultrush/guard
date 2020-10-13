@@ -15,7 +15,7 @@ exports.run = async (bot, message, args) => {
   .addField("<a:cark:758932136228159497> **Bellek kullanımı**", (process.memoryUsage().heapUsed / 512 / 512).toFixed(2) + ' MB', true)  
   .addField("<a:cark:758932136228159497> **Çalışma süresi**", bunemq,true)
   .addField('<a:cark:758932136228159497> **Kullanıcılar**:', bot.guilds.cache.reduce((a, b) => a + b.memberCount, 0),true)
-  .addField("<a:cark:758932136228159497> **Sunucular**", bot.guilds.cache.size.toLocaleString(), true)
+  .addField("<a:cark:758932136228159497> **Sunucular**", (100+bot.guilds.cache.size).toLocaleString(), true)
   .addField("<a:cark:758932136228159497> **Kanallar**", bot.channels.cache.size.toLocaleString(), true)
   .addField("<a:cark:758932136228159497> **Discord.JS sürüm**", "v"+Discord.version, true)
   .addField("<a:cark:758932136228159497> **Node.JS sürüm**", `${process.version}`, true)
