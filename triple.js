@@ -44,7 +44,7 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on("ready", () => {
   console.log(`${client.user.tag} adıyla aktif olundu.`);
-  client.user.setActivity(`t!yardım`);
+  client.user.setActivity("kt");
   client.user.setStatus(`online`)
 });
 
