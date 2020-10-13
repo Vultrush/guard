@@ -42,11 +42,17 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-client.on("ready", () => {
-  console.log(`${client.user.tag} adıyla aktif olundu.`);
-  client.user.setActivity("kt");
-  client.user.setStatus(`online`)
-});
+client.on('ready', async () => {
+   var oyun = [
+        "🔥 t!yardım",
+        "🌍 Trix Guard  "
+    ];
+    setInterval(function() {
+        var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
+        client.user.setActivity(oyun[random],"https://rapp");
+        }, 2 * 2500);
+client.user.setStatus('online')
+})
 
 client.login(ayarlar.token);
 
