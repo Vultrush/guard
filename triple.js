@@ -564,21 +564,28 @@ client.on("guildMemberAdd", async member => {
 
 //---------------------------------Gir - çık-----------------------------------------------
 client.on("guildCreate", guild => {
-  let log = client.channels.get("kanal id");
-  const embed = new Discord.RichEmbed()
+  let log = client.channels.cache.get("765690118576930837");
+  const embed = new Discord.MessageEmbed()
     .setAuthor("Yeni bir sunucuya eklendim!")
-    .setThumbnail(
-      guild.iconURL ||
-        "https://cdn.discordapp.com/attachments/663343412031782947/670657121423196201/mafya_gif.gif"
-    )
-    .setColor("GREEN")
-         .addField("» Sunucu İsmi:", `**${guild.name}**`)
-    .addField("» Sunucu ID:", `\`\`\`${guild.id}\`\`\``)
-    .addField(
-      "Sunucu Bilgisi:",
-      `**Sunucu Sahibi: \`${guild.owner}\`\nSunucu Bölgesi: \`${guild.region}\`\nÜye Sayısı: \`${guild.members.size}\`\nKanal Sayısı: \`${guild.channels.size}\`**`
-    )
+    .setThumbnail(guild.iconURL)
+    .setColor("BLUE")
+    .addField("<a:cark:758932136228159497> Sunucu İsmi:", guild.name)
+    .addField("<a:cark:758932136228159497> Sunucu ID:", guild.id)
+    .addField("<a:cark:758932136228159497> Sunucu Sahibi:", guild.owner)
+    .addField("<a:cark:758932136228159497> Sunucu Bölgesi:", guild.region)
+    .addField("<a:cark:758932136228159497> Sunucu Üye Sayısı:", guild.members.size)
+    .addField("<a:cark:758932136228159497> Sunucu Kanal Sayısı:", guild.channels.size)
+    .addField("<a:cark:758932136228159497> Sunucu Rol Sayısı:", guild.roles.size)
+    .addField("<a:cark:758932136228159497> Toplam Üye Sayısı:", guild.members.size)
+    .addField("<a:cark:758932136228159497> Toplam Kanal Sayısı:", guild.channels.size)
+    .addField("<a:cark:758932136228159497> Toplam Rol Sayısı:", guild.roles.size)
     .setTimestamp()
     .setFooter(client.user.username, client.user.avatarURL);
   log.send(embed);
+});
+
+client.on('message', async message => {
+if (message.content === '!fake') { // . yerine prefixi yaz
+  client.emit('guildMemberAdd', message.member || await message.guild.fetchMember(message.author));
+    }
 });
