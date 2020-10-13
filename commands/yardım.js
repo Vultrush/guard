@@ -16,7 +16,7 @@ const emb = new Discord.MessageEmbed()
 .addField(`<a:cark:758932136228159497> **Yetkili Rol**`,"*Role bota komut verme yetkisini verir.Ancak yine de yetkililer korumalardan etkilenir.*\n \n\n `t!yetkili`")
 .addField(`<a:cark:758932136228159497> **Dokunulmaz Rol**`,"*Bot ayarlanmış role sahip olanları görmezden gelir. Tehlikeli bir izindir.*\n \n\n `t!dokunulmaz`")
 .addField(`<a:cark:758932136228159497> **İstatistik**`,"*Trix Guard istatistiklerini gösterir.*\n \n\n `t!istatistik`")
-.addField(`<a:url:759047081280274452> **Bağlantı Adresleri :**`,`[Beni Davet Et](https://discord.com/oauth2/authorize?client_id=765319680192938005&scope=bot&permissions=8&response_type=code)\n [Destek Sunucusu](https://discord.gg/Jh7yCa7)`)
+.addField(`<a:url:759047081280274452> **Bağlantı Adresleri :**`,`[Beni Davet Et](https://discord.com/oauth2/authorize?client_id=765319680192938005&scope=bot&permissions=8&response_type=code)\n [Destek Sunucusu](https://discord.gg/jzJRKrx)`)
 
 
 
