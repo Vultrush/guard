@@ -44,8 +44,26 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on('ready', async () => {
    var oyun = [
-        "🔥 t!yardım",
-        "🌍 Trix Guard  "
+        "t!yardım",
+        "Trix Guard",
+        "t!yardım",
+        "t!yardım",
+        "Trix Guard",
+        "t!yardım",
+        "Trix Guard",
+        "t!yardım",
+        "Trix Guard",
+        "t!yardım",
+        "Trix Guard",
+        "t!yardım",
+        "Trix Guard",
+        "t!yardım",
+        "Trix Guard",
+        "t!yardım",
+        "Trix Guard",
+        "t!yardım",
+        "Trix Guard",
+        "Trix Guard"
     ];
     setInterval(function() {
         var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
