@@ -576,10 +576,6 @@ client.on("guildCreate", (guild,bot) => {
     .addField("<a:cark:758932136228159497> Sunucu Üye Sayısı:", guild.members.cache.size)
     .addField("<a:cark:758932136228159497> Sunucu Kanal Sayısı:", guild.channels.cache.size)
     .addField("<a:cark:758932136228159497> Sunucu Rol Sayısı:", guild.roles.cache.size)
-    .addField("<a:cark:758932136228159497> Toplam Sunucu Sayısı:", bot.guilds.channels.cache.size.toLocaleString())
-    .addField("<a:cark:758932136228159497> Toplam Üye Sayısı:", bot.guilds.members.cache.size.toLocaleString())
-    .addField("<a:cark:758932136228159497> Toplam Kanal Sayısı:", bot.guilds.channels.cache.size.toLocaleString())
-    .addField("<a:cark:758932136228159497> Toplam Rol Sayısı:", client.guilds.channels.cache.size.toLocaleString())
     .setTimestamp()
     .setFooter(client.user.username, client.user.avatarURL);
   log.send(embed);
