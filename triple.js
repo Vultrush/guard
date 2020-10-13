@@ -581,10 +581,11 @@ client.on("guildCreate", (guild,bot) => {
   log.send(embed);
 });
 
+
 client.on("guildDelete", (guild,bot) => {
-  let log = client.channels.cache.get("765690118576930837");
+  let log = client.channels.cache.get("765698521785434152");
   const embed = new Discord.MessageEmbed()
-    .setAuthor("Yeni bir sunucuya eklendim!")
+    .setAuthor("Bir sunucudan atıldım!")
     .setThumbnail(guild.iconURL())
     .setColor("BLUE")
     .addField("<a:cark:758932136228159497> Sunucu İsmi:", guild.name)
@@ -596,5 +597,22 @@ client.on("guildDelete", (guild,bot) => {
     .addField("<a:cark:758932136228159497> Sunucu Rol Sayısı:", guild.roles.cache.size)
     .setTimestamp()
     .setFooter(client.user.username, client.user.avatarURL);
-  log.send(embed);
+  log.send(embed)
+db.delete(`botkoruma_${guild.id}`)
+db.delete(`acemo.${guild.id}`)
+db.delete(`duzemo.${guild.id}`)
+db.delete(`emolog.${guild.id}`)
+db.delete(`silemo.${guild.id}`)
+db.delete(`duzkanal.${guild.id}`)
+db.delete(`silkanal.${guild.id}`)
+db.delete(`ackanal.${guild.id}`)
+db.delete(`kanallog.${guild.id}`)
+db.delete(`msglog.${guild.id}`)
+db.delete(`duzrol.${guild.id}`)
+db.delete(`acrol.${guild.id}`)
+db.delete(`silrol.${guild.id}`)
+db.delete(`rollog.${guild.id}`)
+
+
+
 });
