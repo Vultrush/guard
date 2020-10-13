@@ -567,7 +567,7 @@ client.on("guildCreate", (guild,bot) => {
   let log = client.channels.cache.get("765690118576930837");
   const embed = new Discord.MessageEmbed()
     .setAuthor("Yeni bir sunucuya eklendim!")
-    .setThumbnail(guild.iconURL)
+    .setThumbnail(guild.iconURL())
     .setColor("BLUE")
     .addField("<a:cark:758932136228159497> Sunucu İsmi:", guild.name)
     .addField("<a:cark:758932136228159497> Sunucu ID:", guild.id)
@@ -581,8 +581,20 @@ client.on("guildCreate", (guild,bot) => {
   log.send(embed);
 });
 
-client.on('message', async message => {
-if (message.content === '!fake') {
-  client.emit('guildCreate', message.guild)
-    }
+client.on("guildDelete", (guild,bot) => {
+  let log = client.channels.cache.get("765690118576930837");
+  const embed = new Discord.MessageEmbed()
+    .setAuthor("Yeni bir sunucuya eklendim!")
+    .setThumbnail(guild.iconURL())
+    .setColor("BLUE")
+    .addField("<a:cark:758932136228159497> Sunucu İsmi:", guild.name)
+    .addField("<a:cark:758932136228159497> Sunucu ID:", guild.id)
+    .addField("<a:cark:758932136228159497> Sunucu Sahibi:", guild.owner)
+    .addField("<a:cark:758932136228159497> Sunucu Bölgesi:", guild.region)
+    .addField("<a:cark:758932136228159497> Sunucu Üye Sayısı:", guild.members.cache.size)
+    .addField("<a:cark:758932136228159497> Sunucu Kanal Sayısı:", guild.channels.cache.size)
+    .addField("<a:cark:758932136228159497> Sunucu Rol Sayısı:", guild.roles.cache.size)
+    .setTimestamp()
+    .setFooter(client.user.username, client.user.avatarURL);
+  log.send(embed);
 });
