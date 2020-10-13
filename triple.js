@@ -612,7 +612,6 @@ db.delete(`duzrol.${guild.id}`)
 db.delete(`acrol.${guild.id}`)
 db.delete(`silrol.${guild.id}`)
 db.delete(`rollog.${guild.id}`)
-
-
-
+db.delete(`dokunulmaz.${guild.id}`)
+db.delete(`yetkili.${guild.id}`)
 });
