@@ -10,7 +10,7 @@ const invex1 = new Discord.MessageEmbed()
     .setAuthor(`${message.author.tag} tarafından istendi.`, message.author.avatarURL())
       .setFooter(client.user.username,client.user.avatarURL())
       .setTimestamp()
-if((message.author.id !== message.guild.owner.user.id) && !message.member.roles.has(yetkili)) return message.channel.send(invex1);
+if((message.author.id !== message.guild.owner.user.id) && !message.member.roles.cache.has(yetkili)) return message.channel.send(invex1);
 
 const emb = new Discord.MessageEmbed()
 .setColor("BLUE")
