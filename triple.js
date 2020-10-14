@@ -130,8 +130,6 @@ var chid = db.fetch(`msglog.${newMessage.guild.id}`)
     let cezalı = db.fetch(`cezalı.${role.guild.id}`)
     if(db.has(`rol2.${role.guild.id}`)) return
     if(!db.has(`silrol.${role.guild.id}`)) return
-    let isim = (role.guild.users.cache.find(user => user.name === role.name))
-    if(isim.bot) return;
     let guild = role.guild;
 var dokunulmaz = db.fetch(`dokunulmaz.${guild.id}`)
     let e = await guild.fetchAuditLogs({type: 'ROLE_DELETE'});
