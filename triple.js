@@ -618,19 +618,8 @@ db.delete(`yetkili.${guild.id}`)
 client.on("message", async message => {
 if (!db.has(`capsengel.${message.channel.id}`)) return;
   if (message.channel.type === "dm" || message.author.bot) return;
-
-  let non_caps, caps;
-  let x = 0;
+let x = 0
   for (x=0;x<message.content.length;x++) {
     if (message.content[x].toUpperCase() === message.content[x]) caps++;
     else non_caps++;
-  }
-
-  const textCaps = (caps / message.content.length) * 100;
-
-  if (textCaps >=60) {
-
-    message.delete();
-    return message.reply(`fazla caps kullanıyorsun.`).then(m => m.delete(5000))
-  }
-})
+}})
