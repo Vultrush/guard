@@ -613,3 +613,41 @@ db.delete(`rollog.${guild.id}`)
 db.delete(`dokunulmaz.${guild.id}`)
 db.delete(`yetkili.${guild.id}`)
 });
+
+
+client.on("message", async msg => {
+  let sChannel = msg.guild.channels.find(c => c.name === "guard-log");
+
+  if (msg.channel.type === "dm" || msg.author.bot || msg.content.length < 15) return;
+  // Use `||` (OR) to make it cleaner.
+
+  let non_caps, caps;
+  // Create the variables.
+
+  for (x=0;x<msg.content.length;x++) {
+    if (msg.content[x].toUpperCase() === msg.content[x]) caps++;
+    else non_caps++;
+  }
+  // `caps` is the amount of capital letters, while `non_caps` is the amount of non-capital letters. This checks for each letter of the message and gets the amount of `caps` and `non_caps`.
+
+  const textCaps = (caps / message.content.length) * 100;
+  // Gets a percentage of the capital letters.
+
+  if (textCaps >= 60 && !msg.member.permissions.has('ADMINISTRATOR')) {
+
+    let embed = new Discord.RichEmbed()
+      .setColor(0xffa300)
+      .setFooter('Retro Guard', client.user.avatarURL)
+      .setTitle("Caps-lock Engel")
+      .setDescription("Fazla caps lock kullanımı yakalandı!")
+      .addField("Kanal Adı", msg.channel.name, true)
+      .addField('Kişi', 'Kullanıcı: '+ msg.author.tag +'\nID: '+ msg.author.id, true)
+      .addField('Engellenen mesaj', "```" + msg.content + "```", true)
+      .setTimestamp() 
+    sChannel.send(embed);
+    msg.delete(); // Deletes the capped message.
+    return msg.reply(`fazla caps kullanıyorsun.`)
+    // `message.reply()` mentions the user that sent the message and is cleaner.
+      .then(m => m.delete(5000))
+  }
+})
