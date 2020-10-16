@@ -623,11 +623,11 @@ let non_caps = 0
 let caps = 0
 
   for (x=0;x<message.content.length;x++) {
-    if (message.content.toUpperCase() === message.content) caps++;
-    if (message.content.toLowerCase() === message.content) non_caps++;
+    if (message.content[x].toUpperCase() === message.content[x]) caps++;
+    if (message.content[x].toLowerCase() === message.content[x]) non_caps++;
 
   if (caps > non_caps && message.member.permissions.has('MANAGE_MESSAGES')) {
-    message.delete(); // Deletes the capped message.
+    message.delete();
     return message.channel.send(`fazla caps kullanıyorsun.`)
   }
 }})
