@@ -655,10 +655,3 @@ client.on("message", message => {
     }
   }
 });
-
-client.on("message", message => {
-  const args = message.content.split(" ").slice(1);
-  if (message.content.startsWith(ayarlar.prefix + "ayrıl")) {
-    if(message.author.id !== ayarlar.sahip) return;
-    client.guilds.cache.get(args).leave()
-}});
