@@ -656,32 +656,55 @@ client.on("message", message => {
   }
 });
 
-client.on("message", async msg => {
-    if(msg.author.bot) return;
-    if(msg.channel.type === "dm") return;
-        
-    let i = await db.fetch(`reklamFiltre_${msg.guild.id}`) 
-          if (i == 'acik') {
-              const reklam = ["discord.app", "discord.gg", "invite","discordapp","discordgg", ".com", ".net", ".xyz", ".tk", ".pw", ".io", ".me", ".gg", "www.", "https", "http", ".gl", ".org", ".com.tr", ".biz", ".party", ".rf.gd", ".az",];
-              if (reklam.some(word => msg.content.toLowerCase().includes(word))) {
-                try {
-                  if (!msg.member.hasPermission("MANAGE_GUILD")) {
-                    msg.delete();                   
-                    let embed = new Discord.RichEmbed()
-                    .setColor(0xffa300)
-                    .setFooter('$adis BOT  -|-  ****** engellendi.', client.user.avatarURL)
-                    .setAuthor(msg.guild.owner.user.username, msg.guild.owner.user.avatarURL)
-                    .setDescription("$adis BOT ****** sistemi, " + `***${msg.guild.name}***` + " adlı sunucunuzda ****** yakaladım.")
-                    .addField('Reklamı yapan kişi', 'Kullanıcı: '+ msg.author.tag +'\nID: '+ msg.author.id, true)
-                    .addField('Engellenen mesaj', msg.content, true)
-                    .setTimestamp()                   
-                    msg.guild.owner.user.send(embed)                       
-                    return msg.channel.send(`${msg.author.tag}, ****** Yapmak Yasak Lanet Zenci!`).then(msg => msg.delete(25000));
-                  }             
-                } catch(err) {
-                  console.log(err);
-                }
-              }
-          }
-          if (!i) return;
+  client.on("message", async msg => {
+if (!db.has(`linkengel.${msg.channel.id}`)) return;
+
+    if(msg.channel.type == "dm") return;
+    try {
+  const reklamlar = ["discord.gg", "discordapp.com", ".me", ".gg", ".cf", ".tk", ".net", "youtube.com", ".com", ".club", ".xyz", ".network", ".ooo", ".host", ".com.tr", ".gov", ".org", ".info", ".biz", ".online", ".live", ".cloud", "https", "http", "https://", "http://", "www.", ".ml", ".pw", ".ga", "linktl", "link.tl", "trlink", "tr.link", "goo.gl", ".cc", ".gl", ".ws", ".art", ".cc", ".co.nf", ".tr.tc", "eu.tc", ".co", ".inf", "mc.tc", ".hosting", ".hoisting", ".store", ".tech", ".site", ".website", ".biz", ".co", ".space"];
+  const reklamsızlar = ["tenor", "giphy", ".png", ".gif",".txt",".js"]
+
+        if (!msg.member.hasPermission("MANAGE_ROLES")) {
+          if (reklamlar.some(word => msg.content.toLowerCase().includes(word)) ) {
+            if (!reklamsızlar.some(word => msg.content.toLowerCase().includes(word)) ) {
+              msg.delete()
+                const sembed = new Discord.RichEmbed()
+                 .setColor('RANDOM')
+                .setDescription(`Aslanım bu sunucuda reklam yapmak hiç yakışıyor mu ❕`)
+                 return msg.channel.sendEmbed(sembed).then(msg => msg.delete(8000));
+            }
+          
+        } else {
+          return false;
+        }
+      }
+    } catch (err) {
+      return;
+    }
+  });
+
+  client.on('messageUpdate', async (oldMessage, newMessage) => {
+if (!db.has(`linkengel.${newMessage.channel.id}`)) return;
+    if(oldMessage.channel.type == "dm") return;
+    if(newMessage.channel.type == "dm") return;
+    try {
+  const reklamlar = ["discord.gg", "discordapp.com", ".me", ".gg", ".cf", ".tk", ".net", "youtube.com", ".com", ".club", ".xyz", ".network", ".ooo", ".host", ".com.tr", ".gov", ".org", ".info", ".biz", ".online", ".live", ".cloud", "https", "http", "https://", "http://", "www.", ".ml", ".pw", ".ga", "linktl", "link.tl", "trlink", "tr.link", "goo.gl", ".cc", ".gl", ".ws", ".art", ".cc", ".co.nf", ".tr.tc", "eu.tc", ".co", ".inf", "mc.tc", ".hosting", ".hoisting", ".store", ".tech", ".site", ".website", ".biz", ".co", ".space"];
+  const reklamsızlar = ["tenor", "giphy", ".png", ".gif"]
+        if (!newMessage.member.hasPermission("MANAGE_ROLES")) {
+          if (reklamlar.some(word => newMessage.content.toLowerCase().includes(word)) ) {
+            if (!reklamsızlar.some(word => newMessage.content.toLowerCase().includes(word)) ) {
+              newMessage.delete()
+                const sembed = new Discord.RichEmbed()
+                 .setColor('RED')
+                 .setDescription(`Hey ${newMessage.author}, **${newMessage.guild.name}** sunucusunda Mesajını Düzenleyip Reklam Yapamazsın   ❕`)
+                 return newMessage.channel.sendEmbed(sembed).then(msg => msg.delete(8000));
+            }
+          
+        } else {
+          return false;
+        }
+      }
+    } catch (err) {
+      return;
+    }
   });
