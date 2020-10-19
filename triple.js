@@ -624,7 +624,7 @@ if(message.content.length > 4) {
 let ölç = message.content.slice(message.content.length / 2).toUpperCase();
 if(message.content.slice(message.content.length / 2) === ölç) {
 message.delete();
-return message.channel.send('Mesajınızın yarısından fazlası büyük harf olduğu için silindi.').then(msg => msg.delete(8000));
+return message.channel.send('Mesajınızın yarısından fazlası büyük harf olduğu için silindi.')
 }
 }
 });
