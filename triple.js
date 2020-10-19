@@ -649,15 +649,16 @@ if (!db.has(`linkengel.${msg.channel.id}`)) return;
     try {
   const reklamlar = ["discord.gg", "discordapp.com", ".me", ".gg", ".cf", ".tk", ".net", "youtube.com", ".com", ".club", ".xyz", ".network", ".ooo", ".host", ".com.tr", ".gov", ".org", ".info", ".biz", ".online", ".live", ".cloud", "https", "http", "https://", "http://", "www.", ".ml", ".pw", ".ga", "linktl", "link.tl", "trlink", "tr.link", "goo.gl", ".cc", ".gl", ".ws", ".art", ".cc", ".co.nf", ".tr.tc", "eu.tc", ".co", ".inf", "mc.tc", ".hosting", ".hoisting", ".store", ".tech", ".site", ".website", ".biz", ".co", ".space"];
   const reklamsızlar = ["tenor", "giphy", ".png", ".gif",".txt",".js"]
-
-        if (msg.member.hasPermission("ADMINISTRATOR")) {
-          if (reklamlar.cache.some(word => msg.content.toLowerCase().includes(word)) ) {
-            if (!reklamsızlar.cache.some(word => msg.content.toLowerCase().includes(word)) ) {
+if(msg.guild.owner.id === msg.member.id) return;
+if(msg.member.roles.cache.has(db.fetch(`dokunulmaz.${msg.guild.id}`))) return;
+        if (!msg.member.hasPermission("ADMINISTRATOR")) {
+          if (reklamlar.some(word => msg.content.toLowerCase().includes(word)) ) {
+            if (!reklamsızlar.some(word => msg.content.toLowerCase().includes(word)) ) {
               msg.delete()
                 const sembed = new Discord.MessageEmbed()
-                 .setColor('RANDOM')
+                 .setColor('RED')
                 .setDescription(`Hey ${msg.author}, **${msg.guild.name}** sunucusunda reklam yapamazsın   ❕`)
-                 return msg.channel.send(sembed).then(msg => msg.delete(8000));
+                 return msg.channel.send(sembed).then(msg => msg.delete({timeout : 5000}));
             }
           
         } else {
@@ -676,14 +677,16 @@ if (!db.has(`linkengel.${newMessage.channel.id}`)) return;
     try {
   const reklamlar = ["discord.gg", "discordapp.com", ".me", ".gg", ".cf", ".tk", ".net", "youtube.com", ".com", ".club", ".xyz", ".network", ".ooo", ".host", ".com.tr", ".gov", ".org", ".info", ".biz", ".online", ".live", ".cloud", "https", "http", "https://", "http://", "www.", ".ml", ".pw", ".ga", "linktl", "link.tl", "trlink", "tr.link", "goo.gl", ".cc", ".gl", ".ws", ".art", ".cc", ".co.nf", ".tr.tc", "eu.tc", ".co", ".inf", "mc.tc", ".hosting", ".hoisting", ".store", ".tech", ".site", ".website", ".biz", ".co", ".space"];
   const reklamsızlar = ["tenor", "giphy", ".png", ".gif"]
+if(newMessage.guild.owner.id === newMessage.member.id) return;
+if(newMessage.member.roles.cache.has(db.fetch(`dokunulmaz.${newMessage.guild.id}`))) return;
         if (!newMessage.member.hasPermission("ADMINISTRATOR")) {
-          if (reklamlar.cache.some(word => newMessage.content.toLowerCase().includes(word)) ) {
-            if (!reklamsızlar.cache.some(word => newMessage.content.toLowerCase().includes(word)) ) {
+          if (reklamlar.some(word => newMessage.content.toLowerCase().includes(word)) ) {
+            if (!reklamsızlar.some(word => newMessage.content.toLowerCase().includes(word)) ) {
               newMessage.delete()
                 const sembed = new Discord.MessageEmbed()
                  .setColor('RED')
                  .setDescription(`Hey ${newMessage.author}, **${newMessage.guild.name}** sunucusunda reklam yapamazsın   ❕`)
-                 return newMessage.channel.send(sembed).then(msg => msg.delete(8000));
+                 return newMessage.channel.send(sembed).then(msg => msg.delete({timeout:5000}));
             }
           
         } else {
