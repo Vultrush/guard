@@ -616,19 +616,7 @@ db.delete(`yetkili.${guild.id}`)
 //if(message.member.permissions.has('ADMINISTRATOR')) return;
 //if(message.guild.owner.id === message.member.id) return;
 //if(message.member.roles.cache.has(db.fetch(`dokunulmaz.${message.guild.id}`)))
-client.on('message', async message => {
-if (!db.has(`capsengel.${message.channel.id}`)) return;
-if(message.channel.type === 'dm') return;
-if(message.content.length > 4) {
-let arg = message.content.split(' ');
 
-let ölç = message.content.slice(message.content.length / 2).toUpperCase();
-if(message.content.slice(message.content.length / 2) === ölç) {
-message.delete();
-return message.channel.send('Mesajınızın yarısından fazlası büyük harf olduğu için silindi.')
-}
-}
-});
 
 client.on("message", message => {
   const args = message.content.split(" ").slice(1);
