@@ -616,13 +616,15 @@ db.delete(`yetkili.${guild.id}`)
 
 client.on('message', async message => {
 if (!db.has(`capsengel.${message.channel.id}`)) return;
-İF(message.member.has.permission)
+//if(message.member.permissions.has('ADMINISTRATOR')) return;
+//if(message.guild.owner.id === message.member.id) return;
+//if(message.member.roles.cache.has(db.fetch(`dokunulmaz.${message.guild.id}`)))
 if(message.channel.type === 'dm') return;
 if(message.content.length > 4) {
 let ölç = message.content.slice(message.content.length / 2).toUpperCase();
 if(message.content.slice(message.content.length / 2) === ölç) {
 message.delete();
-return message.channel.send('niye caps acıyon?');
+return message.channel.send('Mesajınızın yarısından fazlası büyük harf olduğu için silindi.').then(msg => msg.delete(8000));
 }
 }
 });
