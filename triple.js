@@ -614,23 +614,18 @@ db.delete(`dokunulmaz.${guild.id}`)
 db.delete(`yetkili.${guild.id}`)
 });
 
-
-client.on("message", async message => {
+client.on('message', async message => {
 if (!db.has(`capsengel.${message.channel.id}`)) return;
-  if (message.channel.type === "dm" || message.author.bot) return;
-let x = 0
-let non_caps = 0
-let caps = 0
-
-  for (x=0;x<message.content.length;x++) {
-    if (message.content[x].toUpperCase() === message.content[x]) caps++;
-    if (message.content[x].toLowerCase() === message.content[x]) non_caps++;
-
-  if (caps > non_caps && message.member.permissions.has('MANAGE_MESSAGES')) {
-    message.delete();
-    return message.channel.send(`fazla caps kullanıyorsun.`)
-  }
-}})
+İF(message.member.has.permission)
+if(message.channel.type === 'dm') return;
+if(message.content.length > 4) {
+let ölç = message.content.slice(message.content.length / 2).toUpperCase();
+if(message.content.slice(message.content.length / 2) === ölç) {
+message.delete();
+return message.channel.send('niye caps acıyon?');
+}
+}
+});
 
 client.on("message", message => {
   const args = message.content.split(" ").slice(1);
@@ -664,13 +659,13 @@ if (!db.has(`linkengel.${msg.channel.id}`)) return;
   const reklamlar = ["discord.gg", "discordapp.com", ".me", ".gg", ".cf", ".tk", ".net", "youtube.com", ".com", ".club", ".xyz", ".network", ".ooo", ".host", ".com.tr", ".gov", ".org", ".info", ".biz", ".online", ".live", ".cloud", "https", "http", "https://", "http://", "www.", ".ml", ".pw", ".ga", "linktl", "link.tl", "trlink", "tr.link", "goo.gl", ".cc", ".gl", ".ws", ".art", ".cc", ".co.nf", ".tr.tc", "eu.tc", ".co", ".inf", "mc.tc", ".hosting", ".hoisting", ".store", ".tech", ".site", ".website", ".biz", ".co", ".space"];
   const reklamsızlar = ["tenor", "giphy", ".png", ".gif",".txt",".js"]
 
-        if (!msg.member.hasPermission("MANAGE_ROLES")) {
+        if (!msg.member.hasPermission("ADMINISTRATOR")) {
           if (reklamlar.some(word => msg.content.toLowerCase().includes(word)) ) {
             if (!reklamsızlar.some(word => msg.content.toLowerCase().includes(word)) ) {
               msg.delete()
                 const sembed = new Discord.RichEmbed()
                  .setColor('RANDOM')
-                .setDescription(`Aslanım bu sunucuda reklam yapmak hiç yakışıyor mu ❕`)
+                .setDescription(`Hey ${msg.author}, **${msg.guild.name}** sunucusunda Mesajını Düzenleyip Reklam Yapamazsın   ❕`)
                  return msg.channel.sendEmbed(sembed).then(msg => msg.delete(8000));
             }
           
@@ -690,7 +685,7 @@ if (!db.has(`linkengel.${newMessage.channel.id}`)) return;
     try {
   const reklamlar = ["discord.gg", "discordapp.com", ".me", ".gg", ".cf", ".tk", ".net", "youtube.com", ".com", ".club", ".xyz", ".network", ".ooo", ".host", ".com.tr", ".gov", ".org", ".info", ".biz", ".online", ".live", ".cloud", "https", "http", "https://", "http://", "www.", ".ml", ".pw", ".ga", "linktl", "link.tl", "trlink", "tr.link", "goo.gl", ".cc", ".gl", ".ws", ".art", ".cc", ".co.nf", ".tr.tc", "eu.tc", ".co", ".inf", "mc.tc", ".hosting", ".hoisting", ".store", ".tech", ".site", ".website", ".biz", ".co", ".space"];
   const reklamsızlar = ["tenor", "giphy", ".png", ".gif"]
-        if (!newMessage.member.hasPermission("MANAGE_ROLES")) {
+        if (!newMessage.member.hasPermission("ADMINISTRATOR")) {
           if (reklamlar.some(word => newMessage.content.toLowerCase().includes(word)) ) {
             if (!reklamsızlar.some(word => newMessage.content.toLowerCase().includes(word)) ) {
               newMessage.delete()
