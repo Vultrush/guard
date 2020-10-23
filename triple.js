@@ -613,9 +613,7 @@ db.delete(`rollog.${guild.id}`)
 db.delete(`dokunulmaz.${guild.id}`)
 db.delete(`yetkili.${guild.id}`)
 });
-//if(message.member.permissions.has('ADMINISTRATOR')) return;
-//if(message.guild.owner.id === message.member.id) return;
-//if(message.member.roles.cache.has(db.fetch(`dokunulmaz.${message.guild.id}`)))
+
 
 
 client.on("message", message => {
@@ -672,6 +670,9 @@ if(msg.member.roles.cache.has(db.fetch(`dokunulmaz.${msg.guild.id}`))) return;
 
   client.on('messageUpdate', async (oldMessage, newMessage) => {
 if (!db.has(`linkengel.${newMessage.channel.id}`)) return;
+if(newMessage.member.permissions.has('ADMINISTRATOR')) return;
+if(newMessage.guild.owner.id === newMessage.member.id) return;
+if(newMessage.member.roles.cache.has(db.fetch(`dokunulmaz.${newMessage.guild.id}`)))
     if(oldMessage.channel.type == "dm") return;
     if(newMessage.channel.type == "dm") return;
     try {
