@@ -20,7 +20,6 @@ exports.run = async (bot, message, args) => {
   .addField("<a:cark:758932136228159497> **Discord.JS sürüm**", "v"+Discord.version, true)
   .addField("<a:cark:758932136228159497> **Node.JS sürüm**", `${process.version}`, true)
   .addField("<a:cark:758932136228159497> **Ping**", bot.ws.ping+" ms", true)
-  .addField("<a:cark:758932136228159497> **Bot Davet Linki İçin Aşağıdaki Mavi Yazıya Tıkla**", " [Botu Davet Etmek İçin Buraya Tıkla](https://discord.com/oauth2/authorize?client_id=765319680192938005&scope=bot&permissions=8&response_type=code)",true)
   .setTimestamp()
  return message.channel.send(annencilermaldır);
   };
