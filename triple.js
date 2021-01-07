@@ -44,7 +44,9 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on('ready', async () => {
    var oyun = [
-        "g!yardım",
+        "t!yardım",
+        "Youtube: BayDzn",
+        "Twitch: Lishiner"
         
     ];
     setInterval(function() {
