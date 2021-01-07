@@ -44,26 +44,8 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on('ready', async () => {
    var oyun = [
-        "t!yardım",
-        "Trix Guard",
-        "t!yardım",
-        "t!yardım",
-        "Trix Guard",
-        "t!yardım",
-        "Trix Guard",
-        "t!yardım",
-        "Trix Guard",
-        "t!yardım",
-        "Trix Guard",
-        "t!yardım",
-        "Trix Guard",
-        "t!yardım",
-        "Trix Guard",
-        "t!yardım",
-        "Trix Guard",
-        "t!yardım",
-        "Trix Guard",
-        "Trix Guard"
+        "g!yardım",
+        
     ];
     setInterval(function() {
         var random = Math.floor(Math.random()*(oyun.length-0+1)+0);
@@ -72,7 +54,7 @@ client.on('ready', async () => {
 client.user.setStatus('online')
 })
 
-client.login(ayarlar.token);
+client.login(process.env.token);
 
 //---------------- KOMUTLAR -------------------
 
