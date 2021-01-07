@@ -15,7 +15,7 @@ const emb = new Discord.MessageEmbed()
 .addField(`<a:cark:758932136228159497> **Mesaj Log**`,"*Silinen ve düzenlenen mesajları kanala gönderir. Ayrıntılı bilgi için komudu kullanın.*\n \n\n `t!mesaj-log`")
 .addField(`<a:cark:758932136228159497> **Yetkili Rol**`,"*Role bota komut verme yetkisini verir.Ancak yine de yetkililer korumalardan etkilenir.*\n \n\n `t!yetkili`")
 .addField(`<a:cark:758932136228159497> **Dokunulmaz Rol**`,"*Bot ayarlanmış role sahip olanları görmezden gelir. Tehlikeli bir izindir.*\n \n\n `t!dokunulmaz`")
-.addField(`<a:cark:758932136228159497> **İstatistik**`,"*Trix Guard istatistiklerini gösterir.*\n \n\n `t!istatistik`")
+.addField(`<a:cark:758932136228159497> **İstatistik**`,"* Guard istatistiklerini gösterir.*\n \n\n `t!istatistik`")
 
 
 if(!args[0]) return message.channel.send(emb)
