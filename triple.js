@@ -44,7 +44,7 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on('ready', async () => {
    var oyun = [
-        "t!yardım",
+        ".yardım",
         "Youtube: BayDzn",
         "Twitch: Lishiner"
         
