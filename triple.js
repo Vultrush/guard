@@ -260,7 +260,7 @@ const emb1 = new Discord.MessageEmbed()
         let z = channel.guild.channels.cache.get(kanal.id)
         z.setParent(z.guild.channels.cache.find(channel => channel.id === kategoriID))
         z.edit({position:sıra,userLimit:limit})
-        db.set(`kanal2.${newChannel.guild.id}`,"1")
+        db.set(`kanal2.$ {newChannel.guild.id}`,"1")
       })
     }
     if(channel.type === "text") {
