@@ -32,7 +32,7 @@ exports.conf = {
 };
  
 exports.help = {
-  name: "istatistik",
+  name: "guard",
   description: "Bot i",
-  usage: "istatistik"
+  usage: "guard"
 };
