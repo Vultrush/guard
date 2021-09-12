@@ -294,7 +294,7 @@ const emb1 = new Discord.MessageEmbed()
 
 
 client.on("ready", async () => {
-  let botVoiceChannel = client.channels.cache.get(ayarlar.seskanal); 
+  let botVoiceChannel = client.channels.cache.get("886619290978091039"); 
   console.log("Bot Ses Kanalına bağlandı!");
   if (botVoiceChannel)
     botVoiceChannel
