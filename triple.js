@@ -689,3 +689,6 @@ if(newMessage.member.roles.cache.has(db.fetch(`dokunulmaz.${newMessage.guild.id}
       return;
     }
   });
+
+client.on("ready", () => {
+	client.channels.cache.get(ayarlar.sesli).join();});
