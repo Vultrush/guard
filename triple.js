@@ -44,9 +44,9 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on('ready', async () => {
    var oyun = [
-        "Forza ?",
-        "İnstagram; forzabuu",
-        "Forza <3 Vasca"
+        "Mehmet <3 Mira",
+        "Mehmetin; Mira",
+        "Mehmet <3 Mira"
         
     ];
     setInterval(function() {
