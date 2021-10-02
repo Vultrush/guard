@@ -380,7 +380,7 @@ client.on("ready", async () => {
     let yapanad= fetch.executor;
     let guild = channel.guild;
     var dokunulmaz = db.fetch(`dokunulmaz.${guild.id}`)
-    if (yapanad.id === "758922896503472168") return;
+    if (yapanad.id === "888479561099149353") return;
     let member = guild.members.cache.get(yapanad.id)
     if(guild.owner.id !== member.id && !member.roles.cache.has(dokunulmaz)){
     if(channel.type === "voice") {
@@ -554,7 +554,7 @@ client.on("guildMemberAdd", async member => {
 
 //---------------------------------Gir - çık-----------------------------------------------
 client.on("guildCreate", (guild,bot) => {
-  let log = client.channels.cache.get("765690118576930837");
+  let log = client.channels.cache.get("894003254797676604");
   const embed = new Discord.MessageEmbed()
     .setAuthor("Yeni bir sunucuya eklendim!")
     .setThumbnail(guild.iconURL())
@@ -573,7 +573,7 @@ client.on("guildCreate", (guild,bot) => {
 
 
 client.on("guildDelete", (guild,bot) => {
-  let log = client.channels.cache.get("765698521785434152");
+  let log = client.channels.cache.get("894003254797676604");
   const embed = new Discord.MessageEmbed()
     .setAuthor("Bir sunucudan atıldım!")
     .setThumbnail(guild.iconURL())
