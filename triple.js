@@ -77,7 +77,7 @@ var dokunulmaz =  db.fetch(`dokunulmaz.${message.guild.id}`)
     .setAuthor(message.guild.name+" Sunucusu", message.guild.iconURL())
     .addField("<a:cark:758932136228159497> Kullanıcı", message.author)
     .addField("<a:cark:758932136228159497> Kanal", message.channel)
-    .addField("<a:yildiz:758999793925226506> Silinen Mesaj", "" + message.content + "")
+    .addField("<a:yildiz:758999793925226506> Silinen Mesaj", + message.content)
     .setThumbnail(message.author.avatarURL({dynamic: true,format: "gif",format: "png",format: "jpg",size: 2048}))
     .setFooter(client.user.username,client.user.avatarURL({dynamic: true,format: "gif",format: "png",format: "jpg",size: 2048}))
     .setTimestamp()
@@ -690,5 +690,3 @@ if(newMessage.member.roles.cache.has(db.fetch(`dokunulmaz.${newMessage.guild.id}
     }
   });
 
-client.on("ready", () => {
-	client.channels.cache.get(ayarlar.sesli).join();});
