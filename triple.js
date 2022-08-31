@@ -44,9 +44,9 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on('ready', async () => {
    var oyun = [
-        "Mehmet <3 Mira",
-        "Mehmetin; Mira",
-        "Mehmet <3 Mira"
+        "ZyronX",
+        "Zyronx",
+        "Zyronx KALPP"
         
     ];
     setInterval(function() {
