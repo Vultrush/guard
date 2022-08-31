@@ -11,17 +11,8 @@ const embed = new Discord.MessageEmbed()
 .addField('> .emoji-koruma ',' Emoji koruması sağlar ayrıntılı bilgi için komudu kullanın.')
 .addField('> .bot-koruma ',' Botlara karşı koruma sağlar ayrıntılı bilgi için komudu kullanın.')
 .addField('> .mesaj-log ',' Silinen ve düzenlenen mesajları kanala gönderir. Ayrıntılı bilgi için komudu kullanın.')
-.addField('> .sohbet-aç ',' Sohbeti Açmanızı sağlar.')
-.addField('> .unban ',' Ban Kaldırır.')
-.addField('> .mute ',' Etiketlediğiniz Kişiyi Süreli Susturmanızı Sağlar.')
-.addField('> .öneri-sistem ',' Öneri Sisteminin Yardım Menüsü.')
-.addField('> .isimdeğiştir ',' Herhangi Birinin İsmini Değiştirmenizi Sağlar.')
-.addField('> .üyedurum ',' Sunucuda Kaç Kişi Olduğunu Gösterir')
-.addField('> .tümkomutlar ',' Tüm Komutları Gösterir')
-.addField('> .kanalid ',' Etiketlediğiniz Kanalın İdsini Gösterir')
-.addField('> .çıkma-teklifi-et ',' Eğlence komutu herkes Kullanabilir.')
-.addField('> .reklam-engel ','Reklam Engelini Açar Veya Kapatır.')
-.addField('> .Reklam-log ',' Reklam Yapan Kimler İse Onlar Bu Kanala Düşer.')
+.addField('> .yetkili ',' Role bota komut verme yetkisini verir.Ancak yine de yetkililer korumalardan etkilenir.')
+.addField('> .dokunulmaz ',' Bot ayarlanmış role sahip olanları görmezden gelir. Tehlikeli bir izindir.')
 .setFooter(`Bu komut ${message.author.username} tarafından istendi!`, message.author.avatarURL)
 .setTimestamp()
 .setFooter(" Zyronx Moderasyon | 1. Yardım Menüsü | ")
@@ -37,7 +28,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yardımx',
+  name: 'yardım',
   description: 'Tüm komutları gösterir.',
   usage: 'yardım'
 };
