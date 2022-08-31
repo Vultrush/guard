@@ -1,10 +1,10 @@
 {
-  "name": "Trix",
+  "name": "ZyronX",
   "version": "0.0.1",
-  "description": "Trix gelmiş geçmiş en iyi guard",
-  "main": "triple.js",
+  "description": "Zyronx Gelişmiş en iyi guard",
+  "main": "zyronxguard.js",
   "scripts": {
-    "start": "node triple.js"
+    "start": "node zyronxguard.js"
   },
   "dependencies": {
     "discord.js": "^12.3.1",
