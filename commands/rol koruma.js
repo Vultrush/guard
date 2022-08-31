@@ -11,7 +11,7 @@ const emb = new Discord.MessageEmbed()
 .addField(`<a:cark:758932136228159497> **Açılan Rol Koruma**`,"*Açılan rolleri otomatik olarak kapatır.*\n*Rolü açan yetkiliye işlem uygulamaz.* \n\n `t!açılan-rol-koruma`")
 .addField(`<a:cark:758932136228159497> **Düzenlenen Rol Koruma**`,"*Düzenlenen rolleri eski haline getirir.*\n*Düzenleyen yetkiliye işlem uygulamaz.* \n\n `t!duzenlenen-rol-koruma`")
 .addField(`<a:cark:758932136228159497> **Silinen Rol Koruma**`,"*Silinen rolleri otomatik olarak tekrar açar.*\n*Silen yetkiliden tüm rollerini alır.* \n\n `t!silinen-rol-koruma`")
-.addField(`<a:cark:758932136228159497> **Rol Log**`,"*Yukarıda belirtilen işlemlerin kayıtlarını belirtilen kanala gönderir.*\n `t!rol-log`")
+.addField(`<a:cark:758932136228159497> **Rol Log**`,"*Yukarıda belirtilen işlemlerin kayıtlarını belirtilen kanala gönderir.*\n\n `t!rol-log`")
 
 
 

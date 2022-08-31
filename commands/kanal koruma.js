@@ -7,11 +7,11 @@ const emb = new Discord.MessageEmbed()
 .setFooter(client.user.username,client.user.avatarURL())
 .setTimestamp()
 .setTitle(`***__${client.user.username} Kanal Koruma Sistemi__***`)
-.setDescription(' ***Detaylı Kanal Koruma Sistem Bilgilendirmesi***')
-.addField(' `t!açılan-kanal-koruma`\n **Açılan Kanal Koruma** *Açılan kanalları otomatik olarak kapatır.*\n*Kanalı açan yetkiliye işlem uygulamaz.* ')
-.addField('`t!düzenlenen-kanal-koruma`\n **Düzenlenen Kanal Koruma**,*Düzenlenen kanalları eski haline getirir.*\n*Düzenleyen yetkiliye işlem uygulamaz.*')
-.addField(' **Silinen Kanal Koruma**`,*Silinen kanalları otomatik olarak tekrar açar.*\n*Silen yetkiliden tüm rolleri alır.* \n\n `t!silinen-kanal-koruma`')
-.addField(' **Kanal Log**`,*Yukarıda belirtilen işlemlerin kayıtlarını belirtilen kanala gönderir.*\n\n `t!kanal-log`')
+.setDescription(` ***Detaylı Kanal Koruma Sistem Bilgilendirmesi***`)
+.addField(" `t!açılan-kanal-koruma`\n **Açılan Kanal Koruma** *Açılan kanalları otomatik olarak kapatır.*\n*Kanalı açan yetkiliye işlem uygulamaz.* ")
+.addField("`t!düzenlenen-kanal-koruma`\n **Düzenlenen Kanal Koruma**,*Düzenlenen kanalları eski haline getirir.*\n*Düzenleyen yetkiliye işlem uygulamaz.*")
+.addField(" **Silinen Kanal Koruma**`,*Silinen kanalları otomatik olarak tekrar açar.*\n*Silen yetkiliden tüm rolleri alır.* \n\n `t!silinen-kanal-koruma`")
+.addField(" **Kanal Log**`,*Yukarıda belirtilen işlemlerin kayıtlarını belirtilen kanala gönderir.*\n\n `t!kanal-log`")
 
 
 
