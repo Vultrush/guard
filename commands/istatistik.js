@@ -27,12 +27,12 @@ exports.run = async (bot, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['i'],
+  aliases: [ 'i'],
   permLevel: 0
 };
  
 exports.help = {
-  name: "istatistik",
+  name: "guard",
   description: "Bot i",
   usage: "guard"
 };
