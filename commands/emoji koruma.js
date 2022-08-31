@@ -8,10 +8,10 @@ const emb = new Discord.MessageEmbed()
 .setTimestamp()
 .setTitle(`***__${client.user.username} Emoji Koruma Sistemi__***`)
 .setDescription(`<a:unlem:758930479105441795> ***Detaylı Emoji Koruma Sistem Bilgilendirmesi***`)
-.addField(`<a:cark:758932136228159497> **Eklenen Emoji Koruma**`,"*Eklenen emojileri anında kapatır.*\n*Ekleyen yetkiliye işlem uygulamaz.* \n\n `t!eklenen-emoji-koruma`")
-.addField(`<a:cark:758932136228159497> **Emoji İsim Koruma**`,"*Değiştirilen emojiyi eski haline getirir.*\n*Düzenleyen yetkiliye işlem uygulamaz.* \n\n `t!emoji-isim-koruma`")
-.addField(`<a:cark:758932136228159497> **Silinen Emoji Koruma**`,"*Silinen emojileri otomatik olarak tekrar ekler.*\n*Silenin tüm rollerini alır.* \n\n `t!silinen-emoji-koruma`")
-.addField(`<a:cark:758932136228159497> **Emoji Log**`,"*Yukarıda belirtilen işlemlerin kayıtlarını belirtilen kanala gönderir.*\n\n `t!emoji-log`")
+.addField(` **Eklenen Emoji Koruma**`,"*Eklenen emojileri anında kapatır.*\n*Ekleyen yetkiliye işlem uygulamaz.* \n\n `t!eklenen-emoji-koruma`")
+.addField(` **Emoji İsim Koruma**`,"*Değiştirilen emojiyi eski haline getirir.*\n*Düzenleyen yetkiliye işlem uygulamaz.* \n\n `t!emoji-isim-koruma`")
+.addField(` **Silinen Emoji Koruma**`,"*Silinen emojileri otomatik olarak tekrar ekler.*\n*Silenin tüm rollerini alır.* \n\n `t!silinen-emoji-koruma`")
+.addField(` **Emoji Log**`,"*Yukarıda belirtilen işlemlerin kayıtlarını belirtilen kanala gönderir.*\n\n `t!emoji-log`")
 
 
 

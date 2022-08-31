@@ -17,9 +17,9 @@ const emb = new Discord.MessageEmbed()
 .setFooter(client.user.username,client.user.avatarURL())
 .setTimestamp()
 .setTitle(`***__Emoji Koruma Sistemi__***`)
-.setDescription(`<a:unlem:758930479105441795> ***Emoji İsim Koruma Sistem Bilgilendirmesi***\n *Düzenlenen emojiyi eski haline getirir.*\n`)
-.addField(`<a:cark:758932136228159497> **Nasıl Açacağım?**`,"`t!emoji-isim-koruma aç`\n")
-.addField(`<a:cark:758932136228159497> **Nasıl Kapatacağım?**`,"`t!emoji-isim-koruma kapat`")
+.setDescription(` ***Emoji İsim Koruma Sistem Bilgilendirmesi***\n *Düzenlenen emojiyi eski haline getirir.*\n`)
+.addField(` **Nasıl Açacağım?**`,"`t!emoji-isim-koruma aç`\n")
+.addField(` **Nasıl Kapatacağım?**`,"`t!emoji-isim-koruma kapat`")
 
 if(!args[0]) return message.channel.send(emb)
 
