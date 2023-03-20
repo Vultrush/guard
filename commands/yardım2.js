@@ -15,7 +15,7 @@ const embed = new Discord.MessageEmbed()
 .addField('> .dokunulmaz ',' Bot ayarlanmış role sahip olanları görmezden gelir. Tehlikeli bir izindir.')
 .setFooter(`Bu komut ${message.author.username} tarafından istendi!`, message.author.avatarURL)
 .setTimestamp()
-.setFooter(" Zyronx Guard | ")
+.setFooter(" Parsher Guard | ")
 .setImage("")
 message.channel.send(embed)
 };

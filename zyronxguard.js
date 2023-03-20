@@ -44,9 +44,9 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on('ready', async () => {
    var oyun = [
-        "ZyronX",
-        "Zyronx",
-        "Zyronx KALPP"
+        "Parsher",
+        "Parsher",
+        "Parsher youtube"
         
     ];
     setInterval(function() {
@@ -541,7 +541,7 @@ client.on("guildMemberAdd", async member => {
   .setTitle(`Sunucuya Bir Bot Katıldı.`)
   .addField("<a:cark:758932136228159497> Katılan Bot :", member.user.tag)
   .addField("<a:cark:758932136228159497> Katılan Bot ID :", member.id)
-  .addField("<a:cark:758932136228159497> Bot İzin Komutu :", `t!bot-izin ${member.id}`)
+  .addField("<a:cark:758932136228159497> Bot İzin Komutu :", `.bot-izin ${member.id}`)
   .setThumbnail(member.user.avatarURL())
   .setFooter(client.user.username,client.user.avatarURL())
   member.kick(member, `Bot koruma nedeniyle kicklendi.`)
