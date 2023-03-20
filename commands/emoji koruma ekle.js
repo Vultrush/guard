@@ -18,8 +18,8 @@ const emb = new Discord.MessageEmbed()
 .setTimestamp()
 .setTitle(`***__Emoji Koruma Sistemi__***`)
 .setDescription(` ***Eklenen Emoji Koruma Sistem Bilgilendirmesi***\n *Eklenen emojileri anında siler.*\n`)
-.addField(` **Nasıl Açacağım?**`,"`t!eklenen-emoji-koruma aç`\n")
-.addField(` **Nasıl Kapatacağım?**`,"`t!eklenne-emoji-koruma kapat`")
+.addField(` **Nasıl Açacağım?**`,"`.eklenen-emoji-koruma aç`\n")
+.addField(` **Nasıl Kapatacağım?**`,"`.eklenne-emoji-koruma kapat`")
 
 if(!args[0]) return message.channel.send(emb)
 

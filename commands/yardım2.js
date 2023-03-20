@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 exports.run = function(client, message) {
 const embed = new Discord.MessageEmbed()
 .setColor('BLUE')
-.setAuthor("ZyronX Guard  ",client.user.avatarURL())
+.setAuthor("Parsher Guard  ",client.user.avatarURL())
 .setDescription(`Toplamda Botta **${client.commands.size}** Adet Komut Bulunuyor!`)
 .setTimestamp()
 .addField('> .istatistik ',' Botun İstatiğini Atar')

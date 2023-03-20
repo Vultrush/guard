@@ -18,8 +18,8 @@ const emb = new Discord.MessageEmbed()
 .setTimestamp()
 .setTitle(`***__Rol Koruma Sistemi__***`)
 .setDescription(`<a:unlem:758930479105441795> ***Rol-Log Sistem Bilgilendirmesi***\n *Rol Koruma Sistemi loglarını belirlediğiniz kanala gönderir.*\n`)
-.addField(`<a:cark:758932136228159497> **Nasıl Ayarlayacağım?**`,"`t!rol-log #kanal`\n")
-.addField(`<a:cark:758932136228159497> **Nasıl Kapatacağım?**`,"`t!rol-log kapat`")
+.addField(`<a:cark:758932136228159497> **Nasıl Ayarlayacağım?**`,"`.rol-log #kanal`\n")
+.addField(`<a:cark:758932136228159497> **Nasıl Kapatacağım?**`,"`.rol-log kapat`")
 
 
 

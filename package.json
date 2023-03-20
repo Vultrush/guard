@@ -1,7 +1,7 @@
 {
-  "name": "ZyronX",
+  "name": "Parsher",
   "version": "0.0.1",
-  "description": "Zyronx Gelişmiş en iyi guard",
+  "description": "Parsher Gelişmiş en iyi guard",
   "main": "zyronxguard.js",
   "scripts": {
     "start": "node zyronxguard.js"

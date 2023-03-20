@@ -18,8 +18,8 @@ const emb = new Discord.MessageEmbed()
 .setTimestamp()
 .setTitle(`***__Emoji Koruma Sistemi__***`)
 .setDescription(`<a:unlem:758930479105441795> ***Emoji-Log Sistem Bilgilendirmesi***\n *Emoji Koruma Sistemi loglarını belirlediğiniz kanala gönderir.*\n`)
-.addField(` **Nasıl Ayarlayacağım?**`,"`t!emoji-log #kanal`\n")
-.addField(` **Nasıl Kapatacağım?**`,"`t!emoji-log kapat`")
+.addField(` **Nasıl Ayarlayacağım?**`,"`.emoji-log #kanal`\n")
+.addField(` **Nasıl Kapatacağım?**`,"`.emoji-log kapat`")
 
 
 

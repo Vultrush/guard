@@ -18,8 +18,8 @@ const emb = new Discord.MessageEmbed()
 .setTimestamp()
 .setTitle(`***__Kanal Koruma Sistemi__***`)
 .setDescription(`<a:unlem:758930479105441795> ***Kanal-Log Sistem Bilgilendirmesi***\n *Kanal Koruma Sistemi loglarını belirlediğiniz kanala gönderir.*\n`)
-.addField(` **Nasıl Ayarlayacağım?**`,"`t!kanal-log #kanal`\n")
-.addField(` **Nasıl Kapatacağım?**`,"`t!kanal-log kapat`")
+.addField(` **Nasıl Ayarlayacağım?**`,"`.kanal-log #kanal`\n")
+.addField(` **Nasıl Kapatacağım?**`,"`.kanal-log kapat`")
 
 
 

@@ -18,8 +18,8 @@ const emb = new Discord.MessageEmbed()
 .setTimestamp()
 .setTitle(`***__Mesaj Log Sistemi__***`)
 .setDescription(`<a:unlem:758930479105441795> ***Mesaj-Log Sistem Bilgilendirmesi***\n *Silinen ve Düzenlenen mesajları belirlediğiniz kanala gönderir.*\n`)
-.addField(` **Nasıl Ayarlayacağım?**`,"`t!mesaj-log #kanal`\n")
-.addField(` **Nasıl Kapatacağım?**`,"`t!mesaj-log kapat`")
+.addField(` **Nasıl Ayarlayacağım?**`,"`.mesaj-log #kanal`\n")
+.addField(` **Nasıl Kapatacağım?**`,"`.mesaj-log kapat`")
 
 
 

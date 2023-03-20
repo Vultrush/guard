@@ -18,8 +18,8 @@ const emb = new Discord.MessageEmbed()
 .setTimestamp()
 .setTitle(`***__Kanal Koruma Sistemi__***`)
 .setDescription(`<a:unlem:758930479105441795> ***Açılan Kanal Koruma Sistem Bilgilendirmesi***\n *Açılan kanalları anında kapatır ama açan kişiye müdahalede bulunmaz.*\n`)
-.addField(` **Nasıl Açacağım?**`,"`t!açılan-kanal-koruma aç`\n")
-.addField(` **Nasıl Kapatacağım?**`,"`t!açılan-kanal-koruma kapat`")
+.addField(` **Nasıl Açacağım?**`,"`.açılan-kanal-koruma aç`\n")
+.addField(` **Nasıl Kapatacağım?**`,"`.açılan-kanal-koruma kapat`")
 
 if(!args[0]) return message.channel.send(emb)
 

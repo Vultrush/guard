@@ -18,8 +18,8 @@ const emb = new Discord.MessageEmbed()
 .setTimestamp()
 .setTitle(`***__Kanal Koruma Sistemi__***`)
 .setDescription(`<a:unlem:758930479105441795> ***Silinen Emoji Koruma Sistem Bilgilendirmesi***\n *Silinen emojileri yeniden oluşturur ve silenin tüm rollerini alır.*\n`)
-.addField(` **Nasıl Açacağım?**`,"`t!silinen-emoji-koruma aç`\n")
-.addField(` **Nasıl Kapatacağım?**`,"`t!silinen-emoji-koruma kapat`")
+.addField(` **Nasıl Açacağım?**`,"`.silinen-emoji-koruma aç`\n")
+.addField(` **Nasıl Kapatacağım?**`,"`.silinen-emoji-koruma kapat`")
 
 if(!args[0]) return message.channel.send(emb)
 
