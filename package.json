@@ -1,7 +1,7 @@
 {
-  "name": "Parsher",
+  "name": "Night",
   "version": "0.0.1",
-  "description": "Parsher Gelişmiş en iyi guard",
+  "description": "Nght Gelişmiş en iyi guard",
   "main": "zyronxguard.js",
   "scripts": {
     "start": "node zyronxguard.js"

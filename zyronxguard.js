@@ -44,9 +44,8 @@ fs.readdir("./commands/", (err, files) => {
 
 client.on('ready', async () => {
    var oyun = [
-        "Parsher",
-        "Parsher",
-        "Parsher youtube"
+        "By Night"
+        
         
     ];
     setInterval(function() {

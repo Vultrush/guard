@@ -15,7 +15,7 @@ const embed = new Discord.MessageEmbed()
 .addField('> .dokunulmaz ',' Bot ayarlanmış role sahip olanları görmezden gelir. Tehlikeli bir izindir.')
 .setFooter(`Bu komut ${message.author.username} tarafından istendi!`, message.author.avatarURL)
 .setTimestamp()
-.setFooter(" Parsher Guard | ")
+.setFooter(" Night Guard | ")
 .setImage("")
 message.channel.send(embed)
 };
@@ -28,7 +28,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yardım1',
+  name: 'yardim',
   description: 'Tüm komutları gösterir.',
-  usage: 'yardım'
+  usage: 'yardim'
 };
