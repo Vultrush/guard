@@ -28,7 +28,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yardım',
+  name: 'yardım1',
   description: 'Tüm komutları gösterir.',
   usage: 'yardım'
 };
